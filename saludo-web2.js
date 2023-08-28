@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-app.get(['/', '/index.html'], (req, res) => {
-    res.sendFile(__dirname + '/index.html');
+app.get(['/', '/index2.html'], (req, res) => {
+    res.sendFile(__dirname + '/index2.html');
 });
 app.get('/recuperar-datos', (req, res) => {
     const nom = req.query.nombre;
@@ -9,7 +9,7 @@ app.get('/recuperar-datos', (req, res) => {
     const pagina = `<html>
                     <head><title>Pagina Dinamica</title></head>
 <body>
-                      <p>Bienvenido/a ${nom}!</p>
+                      <p>Bienvenide ${nom}!</p>
 <p>Su clave es: ${cla}</p>
                       <p><a href="index.html">Volver</a></p>
                     </body>
